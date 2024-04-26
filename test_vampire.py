@@ -1,7 +1,6 @@
 import unittest
 from solution import Vampire, Human
 
-
 class TestVampire(unittest.TestCase):
     def setUp(self):
         self.vampire_a = Vampire('Vampire A', 'Worker', 10, 20)
@@ -9,19 +8,19 @@ class TestVampire(unittest.TestCase):
         self.vampire_c = Vampire('Vampire C', 'Soldier', 5, 10)
 
     def test_initialization(self):
-        self.assertEqual(self.vampire_a.get_health(), 100)
-        self.assertEqual(self.vampire_a.get_born_year(), 1980)
+        self.assertEqual(self.vampire_a.get_health(), 300)
+        self.assertEqual(self.vampire_a.get_born_year(), 1900)
 
     def test_decrease_health(self):
         self.vampire_a.decrease_health(10)
-        self.assertEqual(self.vampire_a.get_health(), 90)
+        self.assertEqual(self.vampire_a.get_health(), 290)
 
     def test_is_alive(self):
-        self.vampire_a.decrease_health(100)
+        self.vampire_a.decrease_health(350)
         self.assertFalse(self.vampire_a.is_alive())
 
     def test_get_health_percent(self):
-        self.vampire_a.decrease_health(50)
+        self.vampire_a.decrease_health(150)
         self.assertEqual(self.vampire_a.get_health_percent(), 50.0)
 
     def test_attack(self):
@@ -49,7 +48,7 @@ class TestVampire(unittest.TestCase):
         self.assertEqual(self.vampire_c.get_health(), expected_health)
 
     def test_attack_human_with_less_than_50_health(self):
-        human = Human('Human', 'Worker', 1980)
+        human = Human('Human', 'Worker', 1900)
         human.decrease_health(60)
         self.vampire_a.decrease_health(91)
         self.vampire_a.decrease_health(50)

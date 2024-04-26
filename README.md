@@ -34,6 +34,25 @@ class Vampire(Human, Bat):
 ```
 W powyższym przykładzie, konstruktory klas Human i Bat są wywoływane ręcznie w konstruktorze klasy Vampire.
 
+### Dodatkowe założenia
+
+Zakładamy, że siła ataku:
+- Bat = 5pkt, o 5pkt wiecej jeżeli wingSpan > 5 i o 5pkt wiecej jeżeli `flight_speed` > 5
+- Human = 10pkt, 100pkt jeżeli occupation == `Soldier` i 5pkt mniej jeżeli `born_year` < 2000
+- Vampire = 15pkt, jeżeli atakuje klase Human i Human po ataku ma mniej niż 50% zdrowia to zwiększa swoje zdrowie o 10pkt
+
+Maksymalne i początkowe zdrowie:
+- Bat = 40pkt
+- Human = 100pkt
+- Vampire = 300pkt
+
+Wszystkie wampiry urodziły się w 1900 roku
+
+Atak drużyny A na drużynę B polega na tym, że każdy żywy członek drużyny A atakuje członka zwróconego przez metode `get_defender()` drużyny B
+W symulacji `execute_round()` polega na tym, że drużyna A atakuje drużynę B, a następnie drużyna B atakuje drużynę A
+Metoda `has_ended()` zwraca `True` jeżeli któraś z drużyn nie ma żywych członków
+Metoda `execute()` wykonuje rundy symulacji aż do momentu zakończenia
+
 ### Testy jednostkowe
 Testy są podzielone na nastepujące pliki:
 - `test_human.py` - za 10pkt
