@@ -53,7 +53,7 @@ class TestVampire(unittest.TestCase):
         self.vampire_a.decrease_health(91)
         self.vampire_a.decrease_health(50)
         initial_health = self.vampire_a.get_health()
-        expected_health = initial_health + 15
+        expected_health = initial_health + 10
         self.vampire_a.attack(human)
         self.assertEqual(self.vampire_a.get_health(), expected_health)
 

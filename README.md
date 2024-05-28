@@ -38,7 +38,7 @@ W powyższym przykładzie, konstruktory klas Human i Bat są wywoływane ręczni
 
 Zakładamy, że siła ataku:
 - Bat = 5pkt, o 5pkt wiecej jeżeli wingSpan > 5 i o 5pkt wiecej jeżeli `flight_speed` > 5
-- Human = 10pkt, 100pkt jeżeli occupation == `Soldier` i 5pkt mniej jeżeli `born_year` < 2000
+- Human = 10pkt, 100pkt jeżeli occupation == `Soldier` i 5pkt jeżeli `born_year` > 2000
 - Vampire = 15pkt, jeżeli atakuje klase Human i Human po ataku ma mniej niż 50% zdrowia to zwiększa swoje zdrowie o 10pkt
 
 Maksymalne i początkowe zdrowie:

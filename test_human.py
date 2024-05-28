@@ -5,11 +5,11 @@ class TestHuman(unittest.TestCase):
     def setUp(self):
         self.human_a = Human('Human', 'Worker', 1980)
         self.human_b = Human('Other Human', 'Soldier', 1980)
-        self.human_c = Human('Other Human', 'Soldier', 2001)
+        self.human_c = Human('Other Human', 'Python Developer', 2001)
 
     def test_initialization(self):
         self.assertEqual(self.human_a.get_occupation(), 'Worker')
-        self.assertEqual(self.human_a.get_born_year(), 1980)
+        self.assertEqual(self.human_a.get_birth_year(), 1980)
 
     def test_decrease_health(self):
         self.human_a.decrease_health(10)
@@ -30,14 +30,14 @@ class TestHuman(unittest.TestCase):
         self.assertEqual(self.human_b.get_health(), expected_health)
 
     def test_attack_human_b(self):
-        initial_health = self.human_b.get_health()
+        initial_health = self.human_c.get_health()
         expected_health = initial_health - 100
-        self.human_b.attack(self.human_b)
-        self.assertEqual(self.human_b.get_health(), expected_health)
+        self.human_b.attack(self.human_c)
+        self.assertEqual(self.human_c.get_health(), expected_health)
 
     def test_attack_human_c(self):
         initial_health = self.human_b.get_health()
-        expected_health = initial_health - 95
+        expected_health = initial_health - 5
         self.human_c.attack(self.human_b)
         self.assertEqual(self.human_b.get_health(), expected_health)
 
