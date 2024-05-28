@@ -9,7 +9,7 @@ class TestVampire(unittest.TestCase):
 
     def test_initialization(self):
         self.assertEqual(self.vampire_a.get_health(), 300)
-        self.assertEqual(self.vampire_a.get_born_year(), 1900)
+        self.assertEqual(self.vampire_a.get_birth_year(), 1900)
 
     def test_decrease_health(self):
         self.vampire_a.decrease_health(10)
