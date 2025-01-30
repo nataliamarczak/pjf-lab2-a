@@ -9,7 +9,7 @@ Na podstawie ponizszego diagramu UML zaimplementuje klasy:
 - Simulation
 
 Modyfikuj wyłącznie plik `solution.py`.
-![Diagram](../tmp/pjf-lab2-a/vampireExtendedWithSimulation.png)
+![Diagram](vampireExtendedWithSimulation.png)
 
 ### Dziedzinienie wielobazowe
 W diagramie mamy doczynienia z dziedziczeniem wielobazowym, poniewaz klasa Vampire dziedziczy po klasach Human i Bat.
